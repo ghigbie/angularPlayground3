@@ -6,16 +6,24 @@
     meanApp.config(function($routeProvider){
        $routeProvider
             .when('/', {
-                template: '<h1>This is the MAIN page</h1>'
+                controller: 'MeanController',
+                controllerAs: 'vm',
+                templateUrl: 'templates/main.html'
             })
             .when('/about', {
-                template: '<h1>This is the ABOUT page</h1>'
+                controller: 'MeanController1',
+                controllerAs: 'vm',
+                templateUrl: 'templates/about.html'
             })
             .when('/products', {
-                template: '<h1>This is the PRODUCTS page</h1>'
+                controller: 'MeanController2',
+                controllerAs: 'vm',
+                templateUrl: 'templates/products.html'
             })
             .otherwise({
-                template: '<h1>You are completely lost : (</h1>'
+                controller: 'MeanController3',
+                controllerAs: 'vm',
+                templateUrl: 'templates/notfound.html'
             });
     });
 }());
