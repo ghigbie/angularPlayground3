@@ -10,6 +10,12 @@
             })
             .when('/about', {
                 template: '<h1>This is the ABOUT page</h1>'
+            })
+            .when('/products', {
+                template: '<h1>This is the PRODUCTS page</h1>'
+            })
+            .otherwise({
+                template: '<h1>You are completely lost : (</h1>'
             });
     });
 }());
