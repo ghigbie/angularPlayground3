@@ -8,8 +8,12 @@
     </head>
     <body>
         <div class="container">
-            <div ng-view></div>
+            <ul>
+                <li ng-repeat="film in vm.film"> {{ film.title }}</li>
+            </ul>
         </div>
+        <br>
+        <div ng-view></div>
         <script src="./node_modules/angular/angular.min.js"></script>
         <script src="./node_modules/angular-route/angular-route.min.js"></script>
         <script src="./modules/meanApp.js"></script>
